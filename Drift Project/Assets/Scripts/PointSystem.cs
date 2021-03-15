@@ -12,7 +12,7 @@ public class PointSystem : MonoBehaviour
     public RoadTrigger roadTrigger;
 
     float currentScore;
-    float totalScore;
+    public float totalScore;
 
     bool isDrifting = false;
 
