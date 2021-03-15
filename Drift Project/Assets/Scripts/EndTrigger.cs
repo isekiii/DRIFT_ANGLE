@@ -9,6 +9,8 @@ public class EndTrigger : MonoBehaviour
 {
     private int count = 0;
     [SerializeField] private TMP_Text endText;
+    [SerializeField] private GameObject endPanel;
+    [SerializeField] private AudioSource finishSound;
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(count);
@@ -16,21 +18,24 @@ public class EndTrigger : MonoBehaviour
         {
             if (count>0) EndGame();
             count++;
-            
-            
         }
         
     }
 
-    private void Update()
-    {
-        
-    }
 
     void EndGame()
     {
-        Time.timeScale = 0.1f;
+        finishSound.Play();
         endText.text = "!!!FINISH!!!";
-
+        StartCoroutine(startEnd());
     }
+
+    IEnumerator startEnd()
+    {
+        yield return new WaitForSeconds(1f);
+        
+        endPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    
 }
