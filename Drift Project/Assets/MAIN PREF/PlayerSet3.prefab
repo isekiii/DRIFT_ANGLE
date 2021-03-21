@@ -304,6 +304,10 @@ PrefabInstance:
       propertyPath: externalIgnition
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11487144, guid: 4a383ea4a8bde554a81e12745897d28a, type: 3}
+      propertyPath: throttleAndBrakeMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2365244475499738874, guid: 4a383ea4a8bde554a81e12745897d28a, type: 3}
       propertyPath: m_TagString
       value: Player
