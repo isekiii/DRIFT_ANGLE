@@ -16,6 +16,7 @@ void LateUpdate()
 
 void Start()
 {
+    player = GameObject.FindGameObjectWithTag("Player").transform;
     
 }
 }
