@@ -369,6 +369,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5610034347685305094}
     m_Modifications:
+    - target: {fileID: 7400708179833366320, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7400708179833366328, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -416,6 +420,14 @@ PrefabInstance:
     - target: {fileID: 7400708179833366330, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: m_Name
       value: VPP Sport Coupe (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366332, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: enableHotKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: engine.frictionTorque
+      value: 152.93
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}

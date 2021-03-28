@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6134969863220451025}
   - component: {fileID: 6134969863220451024}
   - component: {fileID: 3185767185337224895}
+  - component: {fileID: 8217509636340929672}
   m_Layer: 0
   m_Name: Game manager
   m_TagString: Untagged
@@ -92,6 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 0}
+  roadTrigger: {fileID: 0}
+  totalScore: 0
   speedometer: {fileID: 6134969863220451039}
   currentText: {fileID: 0}
   totalText: {fileID: 0}
@@ -105,5 +108,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bd879a83b84b744fb23612830b75a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8217509636340929672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134969863220451037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a28fc7c50c5b3449ee050d348e57d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

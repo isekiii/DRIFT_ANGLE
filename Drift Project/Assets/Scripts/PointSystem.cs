@@ -13,6 +13,13 @@ public class PointSystem : MonoBehaviour
 
     float currentScore;
     public float totalScore;
+    private float streakMeter = 1f;
+    private bool streakBoosted = false;
+    
+    
+
+    private float lastDriftTime;
+    private float currentTime;
 
     bool isDrifting = false;
 
@@ -25,9 +32,18 @@ public class PointSystem : MonoBehaviour
 
     void Update()
     {
+        currentTime = Time.time;
+        
        driftAngle = Vector3.Angle(car.velocity, car.transform.forward);
+
+       if (driftAngle > 90 ) driftAngle = 0;
        
         isDrifting = driftAngle > 15 && speedometer.vehicleSpeed > 10 && roadTrigger.onRoad;
+
+        if (driftAngle < 5 ) 
+        {
+            StartCoroutine(Drift());
+        }
         
         UpdateScore();
         UpdateText();
@@ -35,16 +51,38 @@ public class PointSystem : MonoBehaviour
         
     }
 
+    IEnumerator Drift()
+    {
+        yield return new WaitForSeconds(1f);
+        if (currentTime - lastDriftTime < 1f)
+        {
+            if (!streakBoosted && !isDrifting)
+            {
+                streakMeter ++;
+                streakBoosted = true;
+                yield return new WaitForSeconds(1f);
+                streakBoosted = false;
+            }
+            
+        } 
+    }
     void UpdateScore()
     {
         if (isDrifting)
         {
-            currentScore += driftAngle * speedometer.vehicleSpeed / 100;
+            currentScore += streakMeter * driftAngle * speedometer.vehicleSpeed / 100;
+            lastDriftTime = Time.time;
+            streakBoosted = false;
         }
         else
         {
-            totalScore += currentScore;
-            currentScore = 0;
+            StartCoroutine(Drift());
+            if (currentTime - lastDriftTime > 1f)
+            {
+                totalScore += currentScore;
+                currentScore = 0;
+                streakMeter = 1f;
+            }  
         }
     }
 
@@ -52,7 +90,7 @@ public class PointSystem : MonoBehaviour
     {
         if (currentScore > 0)
         {
-            currentText.text = currentScore.ToString("0");
+            currentText.text =$"{streakMeter}x {currentScore.ToString("0")} ";
         }
         else currentText.text = "";
 

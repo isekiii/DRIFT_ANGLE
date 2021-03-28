@@ -10069,9 +10069,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 3509441844487531882, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7399745927822272589, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366320, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7400708179833366322, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: steeringWheel

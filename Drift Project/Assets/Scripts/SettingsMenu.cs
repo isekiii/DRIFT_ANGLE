@@ -13,7 +13,7 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
-    void Start()
+    void Awake()
     {
        resolutions = Screen.resolutions;
        
@@ -25,7 +25,8 @@ public class SettingsMenu : MonoBehaviour
        
        for (int i = 0; i < resolutions.Length; i++)
        {
-           string option = resolutions[i].width + "x" + resolutions[i].height;
+          // string option = resolutions[i].width + "x" + resolutions[i].height + $"  {resolutions[i].refreshRate}hz";
+          string option = resolutions[i].width + "x" + resolutions[i].height;
            options.Add(option);
 
            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
@@ -37,6 +38,15 @@ public class SettingsMenu : MonoBehaviour
        resolutionDropDown.AddOptions(options);
        resolutionDropDown.value = currentResolutionIndex;
        resolutionDropDown.RefreshShownValue();
+       
+       SetVolume(PlayerPrefs.GetFloat("Volume"));
+       SetCarVolume(PlayerPrefs.GetFloat("carVolume"));
+       SetQuality(PlayerPrefs.GetInt("qualityIndex"));
+       if (PlayerPrefs.GetInt("Fullscreen") == 1)
+       {
+           SetFullscreen(true);
+       }
+       else SetFullscreen(false);
     }
 
     public void SetResolution(int resolutionIndex)
@@ -47,12 +57,14 @@ public class SettingsMenu : MonoBehaviour
     
     public void SetVolume(float volume)
     {
+        PlayerPrefs.SetFloat("Volume", volume);
         audioMixer.SetFloat("Volume", volume);
        
     }
 
     public void SetCarVolume(float volume)
     {
+        PlayerPrefs.SetFloat("carVolume", volume);
         audioMixer.SetFloat("carVolume", volume);
     }
     
@@ -60,10 +72,17 @@ public class SettingsMenu : MonoBehaviour
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        PlayerPrefs.SetInt("qualityIndex", qualityIndex);
     }
 
     public void SetFullscreen(bool isFullscreen)
     {
+        if (isFullscreen)
+        {
+            PlayerPrefs.SetInt("Fullscreen", 1);
+        }
+        else PlayerPrefs.SetInt("Fullscreen", 0);
+        
         Screen.fullScreen = isFullscreen;
     }
 }
