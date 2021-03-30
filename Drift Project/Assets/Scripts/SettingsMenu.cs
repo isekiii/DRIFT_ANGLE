@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -8,10 +9,15 @@ public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     
-
     public Dropdown resolutionDropDown;
+    public Dropdown quality;
 
     Resolution[] resolutions;
+
+    public Slider masterVolume;
+    public Slider carVolume;
+    public Toggle fullscreenBox;
+    
 
     void Awake()
     {
@@ -29,14 +35,14 @@ public class SettingsMenu : MonoBehaviour
           string option = resolutions[i].width + "x" + resolutions[i].height;
            options.Add(option);
 
-           if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-           {
-               currentResolutionIndex = i;
-           }
+          // if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+         //  {
+         //      currentResolutionIndex = i;
+         //  }
        }
        
        resolutionDropDown.AddOptions(options);
-       resolutionDropDown.value = currentResolutionIndex;
+       //resolutionDropDown.value = currentResolutionIndex;
        resolutionDropDown.RefreshShownValue();
        
        SetVolume(PlayerPrefs.GetFloat("Volume"));
@@ -47,11 +53,27 @@ public class SettingsMenu : MonoBehaviour
            SetFullscreen(true);
        }
        else SetFullscreen(false);
+       
+       masterVolume.value = PlayerPrefs.GetFloat("Volume");
+       carVolume.value = PlayerPrefs.GetFloat("carVolume");
+       quality.value = PlayerPrefs.GetInt("qualityIndex");
+       resolutionDropDown.value = PlayerPrefs.GetInt("resolutionIndex");
+       
+      
     }
-
+ /*
+    private void Start()
+    {
+        masterVolume.value = PlayerPrefs.GetFloat("Volume");
+        carVolume.value = PlayerPrefs.GetFloat("carVolume");
+        quality.value = PlayerPrefs.GetInt("qualityIndex");
+        resolutionDropDown.value = PlayerPrefs.GetInt("resolutionIndex");
+    }
+*/
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
+        PlayerPrefs.SetInt("resolutionIndex", resolutionIndex);
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
     

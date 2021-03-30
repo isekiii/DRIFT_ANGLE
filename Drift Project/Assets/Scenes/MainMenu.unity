@@ -9949,6 +9949,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: b24e792ba67672647af6ea6222591f82, type: 2}
   resolutionDropDown: {fileID: 1263847117}
+  quality: {fileID: 0}
+  masterVolume: {fileID: 0}
+  carVolume: {fileID: 0}
+  fullscreenBox: {fileID: 0}
 --- !u!1 &1783501855
 GameObject:
   m_ObjectHideFlags: 0
