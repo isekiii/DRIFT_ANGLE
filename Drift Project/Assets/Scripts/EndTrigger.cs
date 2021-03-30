@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class EndTrigger : MonoBehaviour
 {
-    private int count = 0;
+    private int count = 1;
+    [SerializeField] private int passCount = 1;
     [SerializeField] private TMP_Text endText;
     [SerializeField] private GameObject endPanel;
     [SerializeField] private AudioSource finishSound;
@@ -16,7 +17,7 @@ public class EndTrigger : MonoBehaviour
         Debug.Log(count);
         if (other.gameObject.CompareTag("Player"))
         {
-            if (count>0) EndGame();
+            if (count>passCount) EndGame();
             count++;
         }
         
