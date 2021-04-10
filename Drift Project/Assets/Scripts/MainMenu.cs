@@ -1,10 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
+    
+    public AudioMixer audioMixer;
+
+
+    private void Awake()
+    {
+        audioMixer.SetFloat("Volume", PlayerPrefs.GetFloat("Volume"));
+        audioMixer.SetFloat("carVolume", PlayerPrefs.GetFloat("carVolume"));
+    }
+
     public void Playgame()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
