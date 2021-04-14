@@ -9916,6 +9916,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1114029473639399757, guid: 20251c7b076f1ea4589eac1ed8d741b4, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1610189364706767190, guid: 20251c7b076f1ea4589eac1ed8d741b4, type: 3}
       propertyPath: m_Controller
       value: 
@@ -10140,6 +10144,26 @@ PrefabInstance:
     - target: {fileID: 7400708179833366330, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: m_Name
       value: Drift Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: tireFriction.model
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: tireFriction.settings.A
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: tireFriction.settings.B
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: tireFriction.settings.C
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: tireFriction.settings.D
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7400708179961934362, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: m_IsActive
