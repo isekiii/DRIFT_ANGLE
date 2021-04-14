@@ -18,7 +18,6 @@ public class ResetCar : MonoBehaviour
     IEnumerator resetCar()
     {
         Vector3 newPos = gameObject.transform.position;
-        //Vector3 newRot = new Vector3(gameObject.transform.rotation.x, 0, 0);
         Quaternion newRot = Quaternion.Euler(gameObject.transform.rotation.x, 0, 0);
         newPos.y += 2;
         gameObject.transform.position = newPos;
