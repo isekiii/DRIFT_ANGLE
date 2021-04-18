@@ -10151,15 +10151,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: tireFriction.settings.A
-      value: 1.2
+      value: 1.027
       objectReference: {fileID: 0}
     - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: tireFriction.settings.B
-      value: 1.25
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: tireFriction.settings.C
-      value: 1.35
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7400708179833366333, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: tireFriction.settings.D
