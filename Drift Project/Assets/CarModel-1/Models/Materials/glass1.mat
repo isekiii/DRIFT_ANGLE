@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: glass1
+  m_Shader: {fileID: 4800000, guid: 8a118428fc381c84fa6e766c18d1a562, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Cube:
+        m_Texture: {fileID: 8900000, guid: 3ea5c3c313a9e3a45ab317da25e2a819, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _EdgeAlpha: 0.26923078
+    - _FrezFalloff: 5.1538463
+    - _FrezPow: 1.73
+    - _Gloss: 0.301
+    - _Metalics: 0.26923078
+    - _Reflection: 0.32
+    - _Shininess: 0.57
+    m_Colors:
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.94509804}
+    - _SpecColor: {r: 1, g: 0.9481132, b: 0.9481132, a: 1}
+  m_BuildTextureStacks: []
