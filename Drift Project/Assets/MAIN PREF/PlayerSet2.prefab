@@ -9811,6 +9811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7400708179833366329, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
+      propertyPath: m_Mass
+      value: 1503
+      objectReference: {fileID: 0}
     - target: {fileID: 7400708179833366330, guid: 8ed12a7c686cf5a4088c0fd886b3309f, type: 3}
       propertyPath: m_Name
       value: Drift Car
