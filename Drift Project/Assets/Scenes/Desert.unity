@@ -972,6 +972,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7883405971652609152, guid: 26fa61487b949f94d8d8d7116e72da7b, type: 3}
+      propertyPath: carModels.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883405971652609152, guid: 26fa61487b949f94d8d8d7116e72da7b, type: 3}
+      propertyPath: carModels.Array.data[3]
+      value: 
+      objectReference: {fileID: 2693839085268584217, guid: 6c4223895509ed74f98c5bb6d08ca0f2, type: 3}
     - target: {fileID: 7883405971652609154, guid: 26fa61487b949f94d8d8d7116e72da7b, type: 3}
       propertyPath: m_Name
       value: CarControler
