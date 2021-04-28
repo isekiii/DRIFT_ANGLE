@@ -9,9 +9,13 @@ public class EndTrigger : MonoBehaviour
 {
     private int count = 1;
     [SerializeField] private int passCount = 1;
-    [SerializeField] private TMP_Text endText;
     [SerializeField] private GameObject endPanel;
     [SerializeField] private AudioSource finishSound;
+
+    [SerializeField] private GameObject carImage1;
+    [SerializeField] private GameObject carImage2;
+    [SerializeField] private GameObject carImage3;
+    [SerializeField] private GameObject carImage4;
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(count);
@@ -27,7 +31,6 @@ public class EndTrigger : MonoBehaviour
     void EndGame()
     {
         finishSound.Play();
-        endText.text = "!!!FINISH!!!";
         StartCoroutine(startEnd());
     }
 
@@ -36,6 +39,22 @@ public class EndTrigger : MonoBehaviour
         yield return new WaitForSeconds(1f);
         
         endPanel.SetActive(true);
+        if(CarSelection.CarID == 0)
+        {
+            carImage1.SetActive(true);
+        }
+        else if (CarSelection.CarID == 1)
+        {
+            carImage2.SetActive(true);
+        }
+        else if(CarSelection.CarID == 2)
+        {
+            carImage3.SetActive(true);
+        }
+        else if (CarSelection.CarID == 3)
+        {
+            carImage4.SetActive(true);
+        }
         Time.timeScale = 0f;
     }
     
