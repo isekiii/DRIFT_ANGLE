@@ -13,7 +13,7 @@ public class PointSystem : MonoBehaviour
 
     float currentScore;
     public float totalScore;
-    private float streakMeter = 1f;
+    public float streakMeter = 1f;
     private bool streakBoosted = false;
     
     

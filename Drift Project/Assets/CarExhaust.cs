@@ -22,7 +22,6 @@ public class CarExhaust : MonoBehaviour
         engineRevs = 1 + car.velocity.magnitude * 3.6f;
         
         exhaust.emissionRate = engineRevs * exhaustRate   ;
-       Debug.Log(exhaust.emissionRate);
     }
     
 }
