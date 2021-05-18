@@ -10,7 +10,7 @@ public class Settings : MonoBehaviour
 {
     
     public AudioMixer audioMixer;
-    
+    public RectTransform optionsPanel;
     
     public TMP_Dropdown RezDropdown;
     public TMP_Dropdown quality;
@@ -88,6 +88,11 @@ public class Settings : MonoBehaviour
         else PlayerPrefs.SetInt("Fullscreen", 0);
         
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void GoBack()
+    {
+        optionsPanel.localScale = new Vector3(0, 0, 0);
     }
     
 }

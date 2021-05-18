@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 {
     
     public AudioMixer audioMixer;
+    public RectTransform optionsMenu;
 
 
     private void Awake()
@@ -25,7 +26,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToSettingsMenu()
     {
-      //  SceneManager.LoadScene("SettingsMenu");
+        optionsMenu.localScale = new Vector3(1, 1, 1);
     }
 
     public void GoToMainMenu()
